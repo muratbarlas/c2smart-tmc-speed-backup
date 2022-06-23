@@ -1,0 +1,51 @@
+python trackCPW.py --source "../videosDOT/Central Park West from 60 St to 61 St_1Minute.mp4" --yolo_weights "weights/yolov5x6.pt" --save-vid --save-txt --output inference/CentralParkTest --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml
+
+python trackBN.py --source "../videosDOT/Broadway North of 242nd Street1Minute.mp4" --save-vid --save-txt --output inference/BroadwayNorth --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5x6.pt"
+
+
+python trackGC.py --source "../videosDOT/Grand Concourse @ 149 St1min.mp4" --save-vid --save-txt --output inference/Grand --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+python track.py --source "../videosDOT/Queens Blvd WB @ 51 Ave1min.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+python trackBL.py --source "../videosDOT/Broadway @ Lawton St_1Min.mp4" --save-vid --save-txt --output inference/BroadwayLawton --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+python trackQueensPl.py --source "../videosDOT/Queens Pl_Northern Blvd _ 41st Ave1min.mp4" --save-vid --save-txt --output inference/QueensPl --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5x6.pt"
+
+python track.py --source "../videosDOT/test.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+python trackBKBrdg.py --source "../videosDOT/Brooklyn Bridge WB_1Minute.mp4" --save-vid --save-txt --output inference/FinalBK1Min --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5x6.pt"
+
+notes:
+add logic to check if object is going east or west
+separate object detection from line detection
+Performance measure counting for 1 direction locations, regular counting accuracy per 15 minutes
+
+
+python track.py --source "../videosDOT/short_new.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python track.py --source "../videosDOT/full.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+python track_og.py --source "../videosDOT/full.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+
+python track.py --source "../videosDOT/turn2_test.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python track.py --source "../videosDOT/turn5_6_short_test.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python track.py --source "../videosDOT/turn9_check.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+python track.py --source "../videosDOT/full.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python track_og.py --source "../videosDOT/workzone1.jpg" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python lawton.py --source "../videosDOT/BroadwayLawtonSt_short.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+
+python speed.py --source "../videosDOT/CentralParkWestfrom60Stto61St.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+python speed.py --source "../videosDOT/speed_short.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
+
+python speed.py --source "../videosDOT/speed_long_formatted.mp4" --save-vid --save-txt --output inference/QueensBlvd --config_deepsort deep_sort_pytorch/configs/deep_sortOmar.yaml --yolo_weights "weights/yolov5s.pt"
